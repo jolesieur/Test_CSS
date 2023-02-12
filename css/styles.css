@@ -70,25 +70,17 @@ body {
     font-size: 1.2rem;
 }
 
-fieldset {
-    display: block;
-    margin: 20px auto;
-    padding: 15px;
-    border: 0;
-    border: 1px solid black;
-}
-
-legend {
-    display: table;
-    min-width: 0px;
-    max-width: 1%;
-    position: relative;
+.desc {
     margin: auto;
-    padding: 5px 20px;
-    font-size: 20px;
+    padding: 5px 0px 0px 10px;
 }
 
 a.link:link { text-decoration: none; color: black; }
 a.link:visited { text-decoration: none; color: black; }
 a.link:hover { text-decoration: none; color: black;  }
 a.link:active { text-decoration: none; color: black; }
+
+.border{
+    border: 1px;
+    padding: 10px;
+}
