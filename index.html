@@ -1,29 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr-CA">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Jean-Olivier Lesieur">
-    <meta name="description" content="description ICI">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="utf-8" />
+    <meta name="author" content="Jean-Olivier Lesieur" />
+    <meta name="description" content="description ICI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Tableau Bootstap</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/bootstrap.min.js"></script>
 
-    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
     <!-- Début Menu Navigation -->
-    <nav class="navbar navbar-expand-md  navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <span class="navbar-brand noselect">Titre de la page</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto" id="myTab">
                 <li class="nav-item">
-                    <a class="nav-link  active" id="tab-1" data-toggle="tab" role="tab" href="#content-1">Accueil</a>
+                    <a class="nav-link active" id="tab-1" data-toggle="tab" role="tab" href="#content-1">Accueil</a>
                 </li>
 
                 <li class="nav-item">
@@ -54,34 +53,55 @@
 
     <main class="">
         <div class="tab-content bg-light rounded">
-
             <!-- Début Intervention -->
             <div class="tab-pane fade show active" id="content-1" aria-labelledby="tab-1" role="tabpanel"
-                style="padding-top:.25em">
+                style="padding-top: 0.25em">
                 <h3 class="lead">Accueil</h3>
                 <span class="desc">Température</span>
-                <div class="border">
-                    <div class="d-flex justify-content-around flex-wrap">
-
+                <div class="container border">
+                    <div class="row d-flex justify-content-around">
                         <div class="d-inline text-center">
                             <span class="desc d-inline">Extérieure</span>
                             <a class="link open-Modal" data-id="Température Extérieure" href="#" data-toggle="modal"
                                 data-target="#exampleModalScrollable">
-                                <p id="indicator"><span class="value">-12.1</span><span class="units"> °C</span></p>
+                                <p id="indicator">
+                                    <span class="value">-12.1</span><span class="units"> °C</span>
+                                </p>
                             </a>
                         </div>
-
-                        <div class="d-inline text-center a">
+                        <div class="d-inline text-center">
                             <span class="desc">Intérieure</span>
-                            <p id="indicator"><span class="value">23.4</span><span class="units"> °C</span></p>
+                            <p id="indicator">
+                                <span class="value">23.4</span><span class="units"> °C</span>
+                            </p>
                         </div>
-                        <div class="d-inline text-center a">
+                        <div class="d-inline text-center">
                             <span class="desc">Garage</span>
-                            <p id="indicator"><span class="value">23.4</span><span class="units"> °C</span></p>
+                            <p id="indicator">
+                                <span class="value">23.4</span><span class="units"> °C</span>
+                            </p>
                         </div>
-                        <div class="d-inline text-center a">
-                            <span class="desc">Serre</span>
-                            <p id="indicator"><span class="value">23.4</span><span class="units"> °C</span></p>
+
+                        <!-- Force next columns to break to new line 
+                        <div class="w-100"></div>-->
+
+                        <div class="d-inline text-center">
+                            <span class="desc d-inline">Extérieure</span>
+                            <p id="indicator">
+                                <span class="value">23.4</span><span class="units"> °C</span>
+                            </p>
+                        </div>
+                        <div class="d-inline text-center">
+                            <span class="desc">Intérieure</span>
+                            <p id="indicator">
+                                <span class="value">23.4</span><span class="units"> °C</span>
+                            </p>
+                        </div>
+                        <div class="d-inline text-center">
+                            <span class="desc">Garage</span>
+                            <p id="indicator">
+                                <span class="value">23.4</span><span class="units"> °C</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +112,9 @@
                     <div class="modal-dialog modal-dialog-scrollable" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalScrollableTitle">Réglage de l'indicateur</h5>
+                                <h5 class="modal-title" id="exampleModalScrollableTitle">
+                                    Réglage de l'indicateur
+                                </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -101,8 +123,12 @@
                                 <span name="bookId" id="bookId" value=""></span>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    Save changes
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -111,12 +137,16 @@
             <!-- Fin Intervention -->
 
             <!-- Début Historique -->
-            <div class="tab-pane fade" id="content-2" aria-labelledby="tab-2" role="tabpanel" style="padding-top:.25em">
+            <div class="tab-pane fade" id="content-2" aria-labelledby="tab-2" role="tabpanel"
+                style="padding-top: 0.25em">
                 <h3 class="lead">Deuxième Onglet</h3>
                 <div class="text-center h-100">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis neque laboriosam a sit
-                        veniam ipsam exercitationem, enim explicabo cum vel dolores repellat porro adipisci quo
-                        nostrum at deserunt perferendis voluptate.</p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+                        neque laboriosam a sit veniam ipsam exercitationem, enim explicabo
+                        cum vel dolores repellat porro adipisci quo nostrum at deserunt
+                        perferendis voluptate.
+                    </p>
                 </div>
             </div>
             <!-- Fin Historique -->
@@ -124,12 +154,15 @@
             <!-- Début Autre -->
             <!-- Début Autre Onglet -->
             <div class="tab-pane root fade" id="content-3" aria-labelledby="tab-6" role="tabpanel"
-                style="padding-top:.25em">
+                style="padding-top: 0.25em">
                 <h3 class="lead">Autre Onglet ICI</h3>
                 <div class="text-center h-100">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis neque laboriosam a sit
-                        veniam ipsam exercitationem, enim explicabo cum vel dolores repellat porro adipisci quo
-                        nostrum at deserunt perferendis voluptate.</p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+                        neque laboriosam a sit veniam ipsam exercitationem, enim explicabo
+                        cum vel dolores repellat porro adipisci quo nostrum at deserunt
+                        perferendis voluptate.
+                    </p>
                 </div>
             </div>
             <!-- Fin Autre Onglet -->
@@ -142,11 +175,10 @@
 
     <script>
         $(document).on("click", ".open-Modal", function () {
-            var myBookId = $(this).data('id');
+            var myBookId = $(this).data("id");
             $(".modal-body #bookId").text(myBookId);
         });
     </script>
-
 </body>
 
 </html>
